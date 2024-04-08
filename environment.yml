@@ -1,0 +1,21 @@
+name: meteostations-vector-cube
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - awscli  
+  - ipykernel
+  - dask
+  - geopandas
+  - papermill
+  - pip
+  - pip:
+      - -e .
+      - awscli-plugin-endpoint
+      - -e git+https://github.com/martibosch/meteostations-geopy#egg=meteostations-geopy
+      - -e git+https://github.com/ltelab/tstore#egg=tstore
+  - pre-commit
+  - pyarrow
+  - python=3.11
+  - snakemake
+  - tqdm
